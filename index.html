@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BOMB DEFUSE — um jogo de enigmas contra o tempo.">
+  <title>BOMB DEFUSE | Pense rápido. Resolva.</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Bomb Defuse - início">
+      <span class="brand-icon" aria-hidden="true">✹</span>
+      <span>BOMB <b>DEFUSE</b></span>
+    </a>
+    <nav aria-label="Navegação principal">
+      <a href="#inicio" class="nav-link active">Início</a>
+      <a href="#niveis" class="nav-link">Níveis</a>
+      <a href="#instrucoes" class="nav-link">Instruções</a>
+    </nav>
+    <div class="connection"><span class="connection-dot"></span><span id="connection-status">MODO DEMONSTRAÇÃO</span></div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <p class="eyebrow"><span></span> PROTOCOLO DE EMERGÊNCIA ATIVADO</p>
+        <h1>BOMB<br><span>DEFUSE</span></h1>
+        <p class="tagline">PENSE <i>·</i> RESOLVA <i>·</i> VENÇA</p>
+        <p class="hero-description">O tempo está correndo. Resolva os enigmas, descubra a sequência e complete sua missão antes que o cronômetro chegue a zero.</p>
+        <a class="button button-primary" href="#niveis">ESCOLHER MISSÃO <span aria-hidden="true">→</span></a>
+        <div class="hero-meta"><span>◷ TEMPO LIMITADO</span><span>⌁ DESAFIO DE LÓGICA</span></div>
+      </div>
+
+      <aside class="mission-panel" aria-label="Informações do jogo">
+        <div class="panel-heading"><span class="status-pulse"></span> BRIEFING DA MISSÃO</div>
+        <article class="feature">
+          <div class="feature-icon">◷</div>
+          <div><h2>Tempo limitado</h2><p>Cada segundo conta. Planeje suas respostas com cuidado.</p></div>
+        </article>
+        <article class="feature">
+          <div class="feature-icon">⌘</div>
+          <div><h2>Enigmas desafiadores</h2><p>Descubra a ordem dos LEDs e depois resolva o código final.</p></div>
+        </article>
+        <article class="feature">
+          <div class="feature-icon">⌁</div>
+          <div><h2>Tecnologia IoT</h2><p>Um jogo web integrado a dispositivos físicos com ESP32.</p></div>
+        </article>
+        <div class="panel-footer"><span>STATUS DO SISTEMA</span><strong>AGUARDANDO AGENTE</strong></div>
+      </aside>
+      <div class="hero-grid" aria-hidden="true"></div>
+    </section>
+
+    <section class="levels section-wrap" id="niveis">
+      <div class="section-title">
+        <div><p class="eyebrow">SELECIONE SEU DESAFIO</p><h2>Escolha uma <span>missão</span></h2></div>
+        <p>Três níveis. Um objetivo.<br>Você está preparado?</p>
+      </div>
+      <div class="level-grid">
+        <article class="level-card level-easy">
+          <div class="level-top"><span class="level-number">01 / NÍVEL</span><span class="level-dot"></span></div>
+          <h3>Básico</h3><p class="level-subtitle">RECRUTA</p>
+          <p>Aprenda as regras e teste sua lógica em um desafio inicial.</p>
+          <ul><li>Enigma introdutório</li><li>Mais tempo para resolver</li><li>Dificuldade baixa</li></ul>
+          <button class="button level-button" data-level="basico">VER MISSÃO <span>→</span></button>
+        </article>
+        <article class="level-card level-medium">
+          <div class="level-top"><span class="level-number">02 / NÍVEL</span><span class="level-dot"></span></div>
+          <h3>Médio</h3><p class="level-subtitle">ESPECIALISTA</p>
+          <p>Interprete pistas e descubra a sequência correta sob pressão.</p>
+          <ul><li>Desafio de lógica</li><li>Tempo moderado</li><li>Dificuldade média</li></ul>
+          <button class="button level-button" data-level="medio">VER MISSÃO <span>→</span></button>
+        </article>
+        <article class="level-card level-hard">
+          <div class="level-top"><span class="level-number">03 / NÍVEL</span><span class="level-dot"></span></div>
+          <h3>Avançado</h3><p class="level-subtitle">PROTOCOLO CRÍTICO</p>
+          <p>O desafio mais exigente vai testar sua atenção e raciocínio.</p>
+          <ul><li>Enigma avançado</li><li>Tempo reduzido</li><li>Dificuldade alta</li></ul>
+          <button class="button level-button" data-level="avancado">VER MISSÃO <span>→</span></button>
+        </article>
+      </div>
+    </section>
+
+    <section class="instructions section-wrap" id="instrucoes">
+      <p class="eyebrow">ANTES DE COMEÇAR</p>
+      <h2>Como funciona a <span>missão</span></h2>
+      <div class="steps">
+        <article><span>01</span><h3>Escolha o nível</h3><p>Leia o briefing e selecione a dificuldade desejada.</p></article>
+        <article><span>02</span><h3>Descubra a sequência</h3><p>Observe os LEDs e use os botões físicos para inserir a ordem correta.</p></article>
+        <article><span>03</span><h3>Resolva o código</h3><p>Com a primeira etapa concluída, use o teclado físico para finalizar o desafio.</p></article>
+      </div>
+      <p class="safety-note">Projeto educacional com bomba cenográfica. Os efeitos são simulados por luzes, display e buzzer.</p>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#inicio">BOMB <b>DEFUSE</b></a><p>Projeto IoT educacional · Pense rápido. Resolva.</p><a href="#inicio" class="back-top">VOLTAR AO TOPO ↑</a></footer>
+
+  <dialog id="mission-dialog" class="mission-dialog">
+    <button class="dialog-close" id="close-dialog" aria-label="Fechar">×</button>
+    <p class="eyebrow">BRIEFING DA MISSÃO</p>
+    <h2 id="dialog-title">Nível básico</h2>
+    <p id="dialog-description"></p>
+    <div class="briefing-box"><span>OBJETIVO</span><p>Descubra a sequência de LEDs usando os botões físicos e, em seguida, digite o código no teclado matricial.</p></div>
+    <p class="demo-note">A conexão com o dispositivo ainda não está ativa. Esta é uma prévia da interface.</p>
+    <button class="button button-primary" id="confirm-mission">ENTENDI <span>→</span></button>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
